@@ -5,7 +5,8 @@
             "includePath": [
                 "d:\\STM32dev\\projects\\demo\\Start",
                 "d:\\STM32dev\\projects\\demo\\User",
-                "d:\\STM32dev\\projects\\demo\\Librarys"
+                "d:\\STM32dev\\projects\\demo\\Librarys",
+                "d:\\STM32dev\\projects\\demo\\System"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
