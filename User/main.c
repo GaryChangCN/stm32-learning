@@ -11,7 +11,7 @@ int main(void) {
 
 	GPIO_Init(GPIOA, &GPIO_initStruct);
 
-	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	GPIO_WriteBit(GPIOA, GPIO_Pin_0, Bit_RESET);
 
 	while(1) {
 	}
