@@ -1,0 +1,25 @@
+{
+    "C_Cpp.default.includePath": [
+        "D:\\STM32dev\\projects\\demo\\Librarys",
+        "D:\\STM32dev\\projects\\demo\\User",
+        "D:\\STM32dev\\projects\\demo\\Start"
+    ],
+    "C_Cpp.default.defines": [
+        "USE_STDPERIPH_DRIVER"
+    ],
+    "KeilAssistant.Project.ExcludeList": [
+        "template.uvproj",
+        "template.uvprojx"
+    ],
+    "files.associations": {
+        "*.conf": "NGINX",
+        "*.swig": "html",
+        "*.jsx": "javascriptreact",
+        "*.vue": "vue",
+        "*.wpy": "vue",
+        "*.wxss": "css",
+        "*.cjson": "jsonc",
+        "*.wxs": "javascript",
+        "stm32f10x.h": "c"
+    }
+}
