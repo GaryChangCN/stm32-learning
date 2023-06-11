@@ -1,29 +1,21 @@
 #include "stm32f10x.h" // Device header
 #include "Delay.h"
-#include "LED.h"
-#include "Buzzer.h"
-#include "LightSensor.h"
+#include "OLED.h"
 
-uint8_t KeyNum;
+
 
 int main(void)
 {
-	LED_Init();
-	Buzzer_Init();
-	LightSensor_Init();
+	OLED_Init();
+
+	OLED_ShowChar(1, 1, 'A');
+	OLED_ShowString(1, 3, "Hello world");
+
+	OLED_ShowSignedNum(2, 7, -29, 2);
+	OLED_ShowBinNum(4, 1, 0xAA55, 16);
 
 	while (1)
 	{
 
-		if (LightSensor_get() == 1)
-		{
-			Buzzer_ON();
-			LED1_ON();
-		}
-		else
-		{
-			Buzzer_OFF();
-			LED1_OFF();
-		}
 	}
 }
