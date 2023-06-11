@@ -1,21 +1,21 @@
-#include "stm32f10x.h"                  // Device header
+#include "stm32f10x.h" // Device header
 #include "Delay.h"
+#include "LED.h"
+#include "Key.h"
 
-int main(void) {
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
-	GPIO_InitTypeDef GPIO_initStruct;
+uint8_t KeyNum;
 
-	GPIO_initStruct.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_12;
-	GPIO_initStruct.GPIO_Speed = GPIO_Speed_50MHz;
+int main(void)
+{
+	LED_Init();
+	Key_init();
 
-	GPIO_Init(GPIOB, &GPIO_initStruct);
+	while (1)
+	{
+		KeyNum = Key_GetNum();
 
-
-	while(1) {
-		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
-		Delay_ms(1500);
-		GPIO_SetBits(GPIOB, GPIO_Pin_12);
-		Delay_ms(3500);
+		if (KeyNum == 1) {
+			LED1_TURN();
+		}
 	}
 }
